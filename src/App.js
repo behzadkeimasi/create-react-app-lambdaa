@@ -1,4 +1,3 @@
-import React from 'react'
 import './App.css';
 
 function App() {
@@ -83,10 +82,10 @@ function Navbar() {
 function SubMenu() {
   return (
     <li id="servicessubmenu" className="nav-item d-flex flex-column align-items-end">
-      <a className="nav-link" href="https://new.alopeyk.com/services/alopeyk">
+      <span className="nav-link">
         <img src="images/arrow-down.svg" alt="arrow down"></img>
         خدمات
-      </a>
+      </span>
       <nav className="navbar submenu">
         <ul className="navbar-nav d-flex flex-column submenunav">
           <SubMenuItem href="https://new.alopeyk.com/services/alopeyk" text="الوپیک" img="images/arrow left.svg" icon="images/small lozenge.svg" />
@@ -104,10 +103,10 @@ function SubMenu() {
 function MobileSubMenu() {
   return (
     <li className="nav-item mobile-menu-item">
-      <a className="mobile-menu-link" href="https://new.alopeyk.com/services/alopeyk" onClick={() => mobileSubMenu()}>
+      <span className="mobile-menu-link" onClick={() => mobileSubMenu()}>
         <img id="mobile-submenu-icon" src="/images/white arrow down.svg" alt="submenu"></img>
         خدمات
-      </a>
+      </span>
       <nav id="mobile-submenu-nav" className="navbar">
         <ul className="navbar-nav d-flex flex-column align-items-center">
           <MobileSubMenuItem href="https://new.alopeyk.com/services/alopeyk" text="الوپیک" />
@@ -189,7 +188,6 @@ function NavItem(props) {
   return (
     <li id={props.id} className="nav-item navitem">
       <a className="nav-link" href={props.href}>
-        <img src={props.img} alt="navbar icon"></img>
         {props.text}
       </a>
     </li>
@@ -214,7 +212,6 @@ function MobileMenuItem(props) {
   return (
     <li id={props.id} className="nav-item mobile-menu-item">
       <a className="mobile-menu-link" href={props.href}>
-        <img src={props.img} alt="navbar item icon"></img>
         {props.text}
       </a>
     </li>
