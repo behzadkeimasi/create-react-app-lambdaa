@@ -104,7 +104,7 @@ function SubMenu() {
 function MobileSubMenu() {
   return (
     <li className="nav-item mobile-menu-item">
-      <span className="mobile-menu-link" onClick={() => mobileSubMenu()}>
+      <span id="mobile-submenu" className="mobile-menu-link" onClick={() => mobileSubMenu()}>
         <img id="mobile-submenu-icon" src="/images/white arrow down.svg" alt="submenu"></img>
         خدمات
       </span>
