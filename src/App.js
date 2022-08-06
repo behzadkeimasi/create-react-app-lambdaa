@@ -289,24 +289,24 @@ const sliderMobile = ["slideritem-selected", "slideritem-next1", "slideritem-nex
   "slideritem-hide", "slideritem-pre2", "slideritem-pre1"];
 
 function sliderSelect(item) {
+  document.getElementById("imgslideritem" + item).setAttribute("src", "images/" + services[item - 1] + "-white.svg");
   let select = document.getElementById("slideritem" + item);
   select.style.background = "linear-gradient(to bottom, #00B5FF, #04f 121%)";
   select.style.color = "#ffffff";
   document.getElementById("pointer" + item).style.visibility = "visible";
-  document.getElementById("imgslideritem" + item).setAttribute("src", "images/" + services[item - 1] + "-white.svg");
   if (item !== selectedItem) {
+    document.getElementById("imgslideritem" + selectedItem).setAttribute("src", "images/" + services[selectedItem - 1] + ".svg");
     document.getElementById("heroimg").setAttribute("src", "images/" + services[item - 1] + ".webp");
     document.getElementById("hero-text").innerHTML = servicesText[item - 1];
     document.getElementById("hero-description").innerHTML = servicesDescription[item - 1];
     document.getElementById("hero-button").setAttribute("href",
       item < 6 ? "https://app.alopeyk.com/" + services[item - 1] + "/new" : "https://bulk.alopeyk.com");
-    document.getElementById("hero-buttontext").innerHTML = " درباره" + servicesTitle[item - 1] + "بیشتر بدانید ";
+    document.getElementById("hero-buttontext").innerHTML = "درباره " + servicesTitle[item - 1] + " بیشتر بدانید";
     document.getElementById("herobuttontext").setAttribute("href", "https://new.alopeyk.com/services/" + services[item - 1]);
     let selected = document.getElementById("slideritem" + selectedItem);
     selected.style.background = "#ffffff";
     selected.style.color = "#A0AAC0";
     document.getElementById("pointer" + selectedItem).style.visibility = "hidden";
-    document.getElementById("imgslideritem" + selectedItem).setAttribute("src", "images/" + services[selectedItem - 1] + ".svg");
   }
   if (window.innerWidth < 768) {
     let selectMobile = item;
