@@ -227,6 +227,9 @@ p {
   margin-top: 24px;
 }
 
+#mobile-submenu:hover{
+  font-weight: 500;
+}
 
 #mobile-submenu-nav{
   display: none;
