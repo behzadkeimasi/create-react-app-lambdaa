@@ -205,6 +205,10 @@ p {
   margin-top: 4px;
 }
 
+.sliderimgwhite{
+  display: none;
+}
+
 #topsection {
   height: 100vh !important;
   padding-bottom: 24px;
