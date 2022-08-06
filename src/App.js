@@ -163,7 +163,7 @@ function Slider() {
           <div id="slideritem6" className="slideritem" onClick={() => { sliderSelect(6); timer(); }}>
             <div id="slideritem6-content" className="d-flex flex-column justify-content-center align-items-center">
               <img id="imgslideritem6" src="images/bulk.svg" alt="service icon"></img>
-              <img id="imgwhiteslideritem6" src="images/bulk-white.svg" alt="service icon white"></img>
+              <img id="imgwhiteslideritem6" className="sliderimgwhite" src="images/bulk-white.svg" alt="service icon white"></img>
               <p>سفارش انبوه</p>
             </div>
             <div id="business-tag" className="d-flex justify-content-center align-items-center">
@@ -181,7 +181,7 @@ function SliderItem(props) {
   return (
     <div id={props.id} className="slideritem" onClick={() => { sliderSelect(parseInt(props.id.charAt(10))); timer(); }}>
       <img id={"img" + props.id} src={props.img} alt="service icon"></img>
-      <img id={"imgwhite" + props.id} src={props.imgwhite} alt="service icon white"></img>
+      <img id={"imgwhite" + props.id} className="sliderimgwhite" src={props.imgwhite} alt="service icon white"></img>
       <p>{props.text}</p>
     </div>
   );
@@ -259,9 +259,6 @@ function ButtonText(props) {
 }
 
 window.onload = function () {
-  for(let x=1;x<7;x++){
-    document.getElementById("imgwhiteslideritem"+x).style.display="none";
-  }
   sliderSelect(1);
   timer();
 };
